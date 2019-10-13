@@ -1,0 +1,28 @@
+.div1{
+    width: 406px;
+    height: 220px;
+    background: url("../image/bg1.jpg") no-repeat;
+}
+.submitStyle{
+    text-align: center;
+}
+.inputCon{
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+.usernamebg{
+    background: url("../image/head.png") no-repeat;
+    width: 32px;
+    height: 32px;
+    margin-left: 0;
+}
+.passwordbg{}
+h1{
+    text-align: center;
+}
+input[type="submit"]{
+    background: url("../image/regbtn.jpg");
+    height: 32px;
+    width: 101px;
+    margin-left: 40%;
+}

@@ -1,0 +1,26 @@
+div{
+    color: #66ccff;
+}
+#d1{
+    color: red;
+    font-size: large;
+}
+.c1{
+    font-family: "Lucida Handwriting";
+}
+div p{
+    color: blueviolet;
+}
+a:link{
+    color: #66ccff;
+}
+a:visited{
+    color: pink;
+}
+a:hover{
+    color: black;
+}
+a:active{
+    color: blueviolet;
+    background-color: blue;
+}
