@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+
+</head>
+<body>
+<img src="../image/bg1.jpg" alt="example" id="img1">
+<script>
+var img1 = document.getElementById("img1");
+var flag=false;
+img1.onclick=function () {
+    if (flag){
+        img1.src="../image/bg1.jpg";
+        flag=false;
+    }else if (!flag){
+        img1.src="../image/bg2.jpg";
+        flag=true;
+    }
+}
+</script>
+</body>
+</html>

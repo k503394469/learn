@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+
+</head>
+<body>
+<input type="button" id="b1" value="open">
+<input type="button" id="b2" value="close">
+<script>
+// var flag = confirm("exit?");
+// if (flag){
+//     window.close();
+// }
+    var b1 = document.getElementById("b1");
+    var b2 = document.getElementById("b2");
+    var baiduWin;
+    b1.onclick=function () {
+       baiduWin= open("https://www.google.com");
+    }
+    b2.onclick=function () {
+        var flag = confirm("exit?");
+        if (flag)
+        baiduWin.close();
+    }
+</script>
+</body>
+</html>

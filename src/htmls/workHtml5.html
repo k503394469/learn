@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+    <style>
+        p {
+            text-align: center;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p><span id="time">5</span>秒后。。。</p>
+<script>
+    setInterval(t1,1000);
+    var count = 5;
+    function t1() {
+        count--;
+        var time = document.getElementById("time");
+        time.innerHTML = count+"";
+        if (count<=0){
+            location.href="http://www.google.com";
+        }
+    }
+</script>
+</body>
+</html>

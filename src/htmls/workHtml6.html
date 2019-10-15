@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+</head>
+<body>
+<span id="ranShow">000000</span>
+<input value="random" type="button" id="ran">
+<script>
+var ranShow=document.getElementById("ranShow");
+var ran=document.getElementById("ran");
+ran.onclick=function newRan() {
+    var number=999999-100000+1;
+    var ranNum=Math.floor(Math.random()*number+100000);
+    ranShow.innerHTML=ranNum;
+}
+</script>
+</body>
+</html>

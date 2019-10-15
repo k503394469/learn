@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+
+</head>
+<body>
+<img src="../image/banner_1.jpg" alt="example" id="img1">
+<script>
+    setInterval(change,2000);
+    var number=1;
+    function change() {
+        number++;
+        var img1 = document.getElementById("img1");
+        img1.src="../image/banner_"+number+".jpg";
+        if (number>=3){
+            number=0;
+        }
+    }
+</script>
+</body>
+</html>
