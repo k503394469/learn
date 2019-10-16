@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOMDemo</title>
+    <style>
+        #div1{
+            border: 1px red solid;
+            float: left;
+        }
+        #div2{
+            border: 1px blue solid;
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    div
+</div>
+
+
+<script>
+var div1 = document.getElementById("div1");
+div1.onclick=function () {
+    div1.id="div2";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOMDemo</title>
+</head>
+<body>
+<a>click</a>
+<input type="button" value="setAttributeToA" id="setA">
+<input type="button" value="removeAttributeFromA" id="removeA">
+<input type="button" value="set" id="set">
+<script>
+    var setA = document.getElementById("setA");
+    var removeA = document.getElementById("removeA");
+    var set = document.getElementById("set");
+    set.onclick = function () {
+        var href = setA.getAttribute("href");
+        document.write(href);
+    }
+    var eleA = document.getElementsByTagName("a")[0];
+    removeA.onclick = function () {
+        eleA.removeAttribute("href");
+    }
+    setA.onclick = function () {
+        eleA.setAttribute("href", "https://www.google.com");
+    }
+</script>
+</body>
+</html>

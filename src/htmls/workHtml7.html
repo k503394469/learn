@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+    <style>
+        table {
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td, th {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" name="number">
+    <input type="text" name="username">
+    <input type="text" name="gender">
+    <input type="button" value="add" id="add_btn">
+</div>
+<table id="table1">
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>删除</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>刘建东</td>
+        <td>male</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">del</a></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>刘建东</td>
+        <td>male</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">del</a></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>刘建东</td>
+        <td>male</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">del</a></td>
+    </tr>
+</table>
+<script>
+    var number = document.getElementsByName("number")[0];
+    var username = document.getElementsByName("username")[0];
+    var gender = document.getElementsByName("gender")[0];
+    var add_btn = document.getElementById("add_btn");
+    var table1 = document.getElementById("table1");
+    add_btn.onclick = function () {
+        var td_number = document.createElement("td");
+        td_number.innerHTML = number.value;
+        var td_username = document.createElement("td");
+        td_username.innerHTML = username.value;
+        var td_gender = document.createElement("td");
+        td_gender.innerHTML = gender.value;
+        var td_del = document.createElement("td");
+        var a_del = document.createElement("a");
+        a_del.innerHTML="del";
+        a_del.setAttribute("href","javascript:void(0);");
+        a_del.setAttribute("onclick","delTr(this);");
+        td_del.appendChild(a_del);
+
+        var tr_add = document.createElement("tr");
+        tr_add.appendChild(td_number);
+        tr_add.appendChild(td_username);
+        tr_add.appendChild(td_gender);
+        tr_add.appendChild(td_del);
+
+        table1.appendChild(tr_add);
+    }
+    function delTr(obj) {
+        var table = obj.parentNode.parentNode.parentNode;
+        var tr=obj.parentNode.parentNode;
+        table.removeChild(tr);
+    }
+</script>
+</body>
+</html>
