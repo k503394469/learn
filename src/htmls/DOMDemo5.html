@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件Demo</title>
+    <style></style>
+
+    <script>
+        window.onload=function () {
+            // document.getElementById("username").onblur = function () {
+            //     alert("lose");
+            // }
+            // document.getElementById("username").onmouseover=function () {
+            //     alert("mouse is coming");
+            // }
+            // document.getElementById("username").onmousedown=function (ev) {
+            //     alert(ev.button);
+            // }
+            // document.getElementById("username").onkeydown=function (ev) {
+            //     alert(ev.keyCode);
+            // }
+            // document.getElementById("username").onchange=function (ev) {
+            //     alert("changed");
+            // }
+            document.getElementById("form").onsubmit=function (ev) {
+                var flag=true;
+                return flag;
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="#" id="form">
+    <input type="text" id="username" name="username">
+    <input type="submit" value="sub">
+</form>
+
+</body>
+</html>

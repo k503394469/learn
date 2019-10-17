@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+    <style>
+        input {
+            text-align: center;
+        }
+
+        table {
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td, th {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var checkAll = document.getElementById("checkAll");
+            var unCheckAll = document.getElementById("unCheckAll");
+            var checkRev = document.getElementById("checkRev");
+            var overAllCb = document.getElementById("overAllCb");
+            var trAll = document.getElementsByTagName("tr");
+            checkAll.onclick = function (ev) {
+                var checks = document.getElementsByName("check");
+                for (var i = 0; i < checks.length; i++) {
+                    checks[i].checked = true;
+                }
+            }
+            unCheckAll.onclick = function (ev) {
+                var checks = document.getElementsByName("check");
+                for (var i = 0; i < checks.length; i++) {
+                    checks[i].checked = false;
+                }
+            }
+            checkRev.onclick = function (ev) {
+                var checks = document.getElementsByName("check");
+                for (var i = 0; i < checks.length; i++) {
+                    if (checks[i].checked==true){
+                        checks[i].checked=false;
+                    }else{
+                        checks[i].checked=true;
+                    }
+                }
+            }
+            overAllCb.onclick=function (ev) {
+                var checks = document.getElementsByName("check");
+                for (var i = 0; i < checks.length; i++) {
+                    checks[i].checked=this.checked;
+                }
+            }
+            for (var i = 0; i < trAll.length; i++) {
+                trAll[i].onmouseover=function (ev) {
+                    this.style.background="#66ccff";
+                }
+                trAll[i].onmouseleave=function (ev) {
+                    this.style.background="#ffffff";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<table id="table1">
+    <tr>
+        <th><input type="checkbox" name="check" id="overAllCb"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>删除</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="check"></td>
+        <td>1</td>
+        <td>刘建东</td>
+        <td>male</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">del</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="check"></td>
+        <td>1</td>
+        <td>刘建东</td>
+        <td>male</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">del</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="check"></td>
+        <td>1</td>
+        <td>刘建东</td>
+        <td>male</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">del</a></td>
+    </tr>
+</table>
+<div>
+    <input type="button" value="全选" id="checkAll">
+    <input type="button" value="全不选" id="unCheckAll">
+    <input type="button" value="反选" id="checkRev">
+</div>
+
+</body>
+</html>

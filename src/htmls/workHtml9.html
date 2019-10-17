@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+    <style>
+        .ok {
+            color: green;
+        }
+
+        .fail {
+            color: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var form1 = document.getElementById("form1");
+            form1.onsubmit = function (ev) {
+                return checkUsername()&&checkPass();
+            }
+
+            document.getElementById("username").onblur=function (ev) {
+                checkUsername();
+            }
+            document.getElementById("password").onblur=function (ev) {
+                checkPass();
+            }
+
+            function checkPass() {
+                var password = document.getElementById("password").value;
+                var reg = /^\w{6,12}$/;
+                var flag = reg.test(password);
+                if (flag) {
+                    document.getElementById("passCheck").className = "ok";
+                    document.getElementById("passCheck").innerHTML = "√";
+                } else {
+                    document.getElementById("passCheck").className = "fail";
+                    document.getElementById("passCheck").innerHTML = "×";
+                }
+                return flag;
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="#" id="form1" method="post">
+    <input type="text" name="username" id="username"><span id="userCheck"></span> <br>
+    <input type="password" name="password" id="password"><span id="passCheck"></span> <br>
+    <input type="submit" value="go">
+</form>
+</body>
+</html>
