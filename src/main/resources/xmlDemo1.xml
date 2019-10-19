@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE students SYSTEM "./dtds/stu.dtd">
 <students>
-    <student number="s1">
+    <student id="s1">
         <name>刘建东</name>
         <age>12</age>
         <sex>male</sex>
     </student>
-    <student number="s2">
+    <student id="s2">
         <name>刘建东</name>
         <age>12</age>
         <sex>male</sex>
